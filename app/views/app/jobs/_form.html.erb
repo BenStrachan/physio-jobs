@@ -1,0 +1,64 @@
+<%= simple_form_for([:app, @job]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :job_reply_email %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_title %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_location %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_type %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_category %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_tags %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :job_application_url %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :minimum_hourly_rate %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :maximum_hourly_rate %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :minimum_salary %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :maximum_salary %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :hours_per_week %>
+      </div>
+    </div>
+    <%= f.input :job_description, :as => :text, :input_html => {:rows => 5} %>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :company_details %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :company_website %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :company_video %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :company_tagline %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-outline-primary" %>
+  </div>
+<% end %>

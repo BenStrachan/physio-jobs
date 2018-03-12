@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_reply_email: MyString
+  job_title: MyString
+  job_location: MyString
+  job_type: MyString
+  job_category: MyString
+  job_tags: MyString
+  job_description: MyString
+  job_application_url: MyString
+  minimum_hourly_rate: 1
+  maximum_hourly_rate: 1
+  minimum_salary: 1
+  maximum_salary: 1
+  hours_per_week: 1
+  company_details: MyString
+  company_website: MyString
+  company_video: MyString
+  company_tagline: MyString
+
+two:
+  job_reply_email: MyString
+  job_title: MyString
+  job_location: MyString
+  job_type: MyString
+  job_category: MyString
+  job_tags: MyString
+  job_description: MyString
+  job_application_url: MyString
+  minimum_hourly_rate: 1
+  maximum_hourly_rate: 1
+  minimum_salary: 1
+  maximum_salary: 1
+  hours_per_week: 1
+  company_details: MyString
+  company_website: MyString
+  company_video: MyString
+  company_tagline: MyString
