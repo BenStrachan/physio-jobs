@@ -1,0 +1,7 @@
+(function(){
+  $('#modal-show-job').remove();
+
+  $('body').append('<%= j(render"modal_show", job: @job) %>');
+
+  $('#modal-show-job').modal('show');
+})()

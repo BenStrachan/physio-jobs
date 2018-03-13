@@ -5,7 +5,11 @@ layout 'admin'
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @query = Job.where("created_at >= ?", 90.days.ago.beginning_of_day).ransack(params[:q])
+
+    @jobs = @query.result
+                  .order(created_at: :desc)
+                  .page(params[:page]).per(10)
   end
 
   # GET /jobs/1
@@ -70,6 +74,6 @@ layout 'admin'
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:job_reply_email, :job_title, :job_location, :job_type, :job_category, :job_tags, :job_description, :job_application_url, :minimum_hourly_rate, :maximum_hourly_rate, :minimum_salary, :maximum_salary, :hours_per_week, :company_details, :company_website, :company_video, :company_tagline)
+      params.require(:job).permit(:job_reply_email, :job_title, :job_location, :job_type, :job_category, :job_tags, :job_description, :job_application_url, :minimum_hourly_rate, :maximum_hourly_rate, :minimum_salary, :maximum_salary, :hours_per_week, :company_details, :company_website, :company_video, :company_tagline, :company_logo)
     end
 end

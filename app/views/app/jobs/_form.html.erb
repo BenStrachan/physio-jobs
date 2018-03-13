@@ -55,10 +55,30 @@
       <div class="col-md-4">
         <%= f.input :company_tagline %>
       </div>
+      <div class="col-md-4">
+        <%= f.input :company_logo %>
+      </div>
     </div>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-outline-primary" %>
   </div>
+<% end %>
+
+<% content_for :page_js do %>
+<script>
+  (function() {
+    var autocomplete;
+
+    function locationSelected() {
+      var place = autocomplete.getPlace();
+    };
+    autocomplete = new google.maps.places.Autocomplete($('#job_job_location')[0], {
+      types: ['(cities)']
+    });
+
+    autocomplete.addListener('place_changed', locationSelected);
+  })();
+</script>
 <% end %>

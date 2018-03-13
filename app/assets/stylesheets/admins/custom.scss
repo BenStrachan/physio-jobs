@@ -1,3 +1,8 @@
+body {
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+}
+
 .form-group {
   .file {
     display: block;
@@ -112,5 +117,14 @@
       font-weight: 500;
       font-size: 13px;
     }
+  }
+}
+
+.pagination {
+  margin: 0px;
+  span {
+    font-weight: 600;
+    display: inline-block;
+    margin: 0px 2px;
   }
 }

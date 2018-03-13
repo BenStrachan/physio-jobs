@@ -1,0 +1,132 @@
+
+<div class="modal fade" tabindex="-1" id="modal-show-job">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Job detail</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <strong>Job reply email:</strong>
+              <%= job.job_reply_email %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job title:</strong>
+              <%= job.job_title %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job location:</strong>
+              <%= job.job_location %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job type:</strong>
+              <%= job.job_type %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job category:</strong>
+              <%= job.job_category %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job tags:</strong>
+              <%= job.job_tags %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Job application url:</strong>
+              <%= job.job_application_url %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Minimum hourly rate:</strong>
+              <%= job.minimum_hourly_rate %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Maximum hourly rate:</strong>
+              <%= job.maximum_hourly_rate %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Minimum salary:</strong>
+              <%= job.minimum_salary %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Maximum salary:</strong>
+              <%= job.maximum_salary %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Hours per week:</strong>
+              <%= job.hours_per_week %>
+            </p>
+          </div>
+        </div>
+
+        <p>
+          <strong>Job description:</strong>
+          <%= job.job_description %>
+        </p>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <strong>Company details:</strong>
+              <%= job.company_details %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Company website:</strong>
+              <%= job.company_website %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Company video:</strong>
+              <%= job.company_video %>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <strong>Company tagline:</strong>
+              <%= job.company_tagline %>
+            </p>
+          </div>
+          <% if job.company_logo.exists? %>
+          <div class="col-sm-6">
+            <p>
+              <strong>Company logo:</strong>
+              <img src="<%= job.company_logo.url %>" alt="" class="avatar-med">
+            </p>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
